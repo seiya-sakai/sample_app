@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% @post.errors.full_messages.each do |message| %>
+    <%=message %>
+    <% end %>
+  <%=form_tag("/posts/create") do %>
+    <textarea name="content"  ><%= @post.content %></textarea>
+    <input type="submit"  value="送信">
+    <% end %>
+  </body>
+</html>

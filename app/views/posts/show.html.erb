@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="posts-show-item">
+      <%=@post.content %>
+      <div class="post-time">
+        <%=@post.created_at %>
+      </div>
+      <%=link_to("編集","/posts/#{@post.id}/edit") %>
+      <%=link_to("削除","/posts/#{@post.id}/destroy",{method:"post"}) %>
+    </div>
+  </body>
+</html>

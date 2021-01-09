@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="name-email">
+      <img src="<%="/public/#{@user.image_name}" %>">
+            <h2><%=@user.name %></h2>
+        <p><%=@user.email %></p>
+        <%=link_to("編集","/users/#{@user.id}/edit") %>
+    </div>
+  </body>
+</html>

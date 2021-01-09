@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% @user.errors.full_messages.each do |message| %>
+    <%=message %>
+    <% end %>
+    <%=form_tag("/users/create") do %>
+      <div class="signup-wrapper">
+        <div class="signup-name">
+        　<p>ユーザー名</p>
+          <input name="name" value="<%=@user.name %>">
+        </div>
+        <div class="signup-email">
+          <p>メールアドレス</p>
+          <input name="email" value="<%=@user.email %>">
+        </div>
+        <input type="submit"  value="新規登録">
+      </div>
+    <% end %>
+  </body>
+</html>
