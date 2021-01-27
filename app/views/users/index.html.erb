@@ -1,13 +1,35 @@
-<!DOCTYPE html>
+<div class="main users-index">
+  <div class="container">
+    <h1 class="users-heading">ユーザー一覧</h1>
+    <% @users.each do |user| %>
+      <div class="users-index-item">
+        <div class="user-left">
+          <img src="<%= "/user_images/#{user.image_name}" %>">
+        </div>
+        <div class="user-right">
+          <%= link_to(user.name, "/users/#{user.id}") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div><!DOCTYPE html>
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
+    <div class="users">
+      <p>ユーザー一覧</p>
+    </div>
     <% @users.each do |user| %>
      <div class="user-name">
-      <%=link_to(user.name,"/users/#{user.id}") %>
+       <div class="user-image">
+         <img src="<%="/user_images/#{user.image_name}" %>">
+       </div>
+       <div class="user-infomation">
+         <%=link_to(user.name,"/users/#{user.id}") %>
+       </div>
      </div>
     <% end %>
   </body>

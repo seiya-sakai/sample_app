@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <% @post.errors.full_messages.each do |message| %>
-    <%=message %>
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">編集する</h1>
+    <%= form_tag("/posts/#{@post.id}/update") do %>
+      <div class="form">
+        <div class="form-body">
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <textarea name="content"><%= @post.content %></textarea>
+          <input type="submit" value="保存">
+        </div>
+      </div>
     <% end %>
-    <%=form_tag("/posts/#{@post.id}/update") do %>
-     <textarea name="content"><%=@post.content %></textarea>
-     <input type="submit" value="保存">
-    <% end %>
-  </body>
-</html>
+  </div>
+</div>

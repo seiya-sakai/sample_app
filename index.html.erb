@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% @posts.each do |post| %>
+      <div class="posts-index-item">
+        <%=link_to(post.content,"/posts/#{post.id}") %>
+      </div>
+    <% end %>
+  </body>
+</html>

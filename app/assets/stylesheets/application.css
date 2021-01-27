@@ -13,38 +13,4 @@
  *= require_tree .
  *= require_self
  */
- li {
-   list-style: none;
- }
-.link {
-  background-color: black;
-  clear: left;
-}
-.contentwrapper {
-  float: left;
-  margin-right: 10px;
-}
-.flash{
-  color: white;
-  text-align: center;
-  background-color: blue;
-}
-.signup-name , .signup-email{
-  text-align: center;
-}
-.signup-name input, .signup-email input{
-  width:200px;
-  height:20px;
-}
-.signup-wrapper {
-  padding: 100px;
-
-}
-.user-name {
-  text-align: center;
-  padding:50px;
-}
-.name-email {
-  text-align: center;
-  padding: 200px;
-}
+ 
